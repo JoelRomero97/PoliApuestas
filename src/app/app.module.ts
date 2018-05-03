@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ColorComponent } from './color/color.component';
 import { TituloComponent } from './titulo/titulo.component';
 import { ContenidoComponent } from './contenido/contenido.component';
+import { Color2Component } from './color2/color2.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ContenidoComponent } from './contenido/contenido.component';
     AppComponent,
     ColorComponent,
     TituloComponent,
-    ContenidoComponent
+    ContenidoComponent,
+    Color2Component
   ],
   imports: [
     BrowserModule

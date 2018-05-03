@@ -1,0 +1,17 @@
+.Roja
+{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 10px;
+    margin-right: 80px;
+}
+
+.Azul
+{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin: 10px;
+    margin-right: 80px;
+}

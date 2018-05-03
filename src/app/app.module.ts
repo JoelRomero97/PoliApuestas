@@ -3,11 +3,17 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { ColorComponent } from './color/color.component';
+import { TituloComponent } from './titulo/titulo.component';
+import { ContenidoComponent } from './contenido/contenido.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ColorComponent,
+    TituloComponent,
+    ContenidoComponent
   ],
   imports: [
     BrowserModule

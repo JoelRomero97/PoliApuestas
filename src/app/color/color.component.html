@@ -1,1 +1,15 @@
-<div class="Azul"></div>
+<!-- <div class="Azul"></div> -->
+<div class="Box" [ngClass] = "{'Roja':color==='red', 'Azul':color==='blue'}"></div>
+
+<form (submit)="onSubmit(form)" #form="ngForm">
+
+    <mat-form-field class="example-full-width">
+        <input matInput type="text" placeholder="titulo" [(ngModel)]="title" name="title" required minlength="1"/>
+      </mat-form-field>
+    <div *ngIf="!form.valid"><p>INVALIDO</p></div>
+    <button mat-icon-button [disabled]="!form.valid" type="submit" >Envía</button>
+  </form>
+  {{title}}
+  <p *ngFor="let i of arreglo">El cubo de {{i}} es: {{cubo(i)}}</p>
+  <!-- <p *ngFor="let i of arreglo">{{i}}</p> -->
+<!-- <button type="button" (click)="onClick()">CLICK</button> -->

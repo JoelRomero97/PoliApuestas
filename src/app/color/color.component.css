@@ -1,7 +1,22 @@
-.Azul
+button
+{
+    width: 60px;
+}
+
+.Box
 {
     width: 120px;
     height: 120px;
-    background-color: red;
+    background-color:black;
     margin: 10px;
+}
+
+.Azul
+{
+    background-color: blue;
+}
+
+.Roja
+{
+    background-color: red;
 }

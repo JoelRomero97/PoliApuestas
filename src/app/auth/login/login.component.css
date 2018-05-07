@@ -8,3 +8,11 @@ form
 {
     text-align: center;
 }
+
+.Mensaje
+{
+    background-color: deepskyblue;
+    width: 7%;
+    font-family: Helvetica;
+    text-align: center;
+}

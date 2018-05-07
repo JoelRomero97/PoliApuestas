@@ -21,13 +21,15 @@ export class LoginService {
     //     console.log("Login incorrecto");
     //   }
     // }
-    return new Observable(observer =>{
-
-                    if ((formulario.value.correo) == this.user)
+    return new Observable(observer =>
+      {
+        setTimeout (() =>
                     {
+                      if ((formulario.value.correo) == this.user)
+                      {
                       if ((formulario.value.password) == this.password)
                       {
-                        observer.next("Login correcto");
+                          observer.next("Login correcto");
                       }else
                       {
                         observer.error("Contraseña incorrecta");
@@ -35,6 +37,8 @@ export class LoginService {
                       }else
                       {
                         observer.error("Correo incorrecto");
-                      }});
+                      }
+                    }, 2000);
+      });
   }
 }

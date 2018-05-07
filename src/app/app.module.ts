@@ -17,6 +17,16 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from './material.module';
 import { LoginComponent } from './auth/login/login.component';
 import { LoaderComponent } from './elements/loader/loader.component';
+import { NavComponent } from './navigation/nav/nav.component';
+
+import { MediaMatcher, BreakpointObserver } from '@angular/cdk/layout';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './panel/home/home.component';
+import { ApuestasComponent } from './panel/apuestas/apuestas.component';
+import { ConfiguracionComponent } from './panel/configuracion/configuracion.component';
+import { PanelComponent } from './panel/panel.component';
+import { NuevasApuestasComponent } from './panel/apuestas/nuevas-apuestas/nuevas-apuestas.component';
+import { ApuestasPasadasComponent } from './panel/apuestas/apuestas-pasadas/apuestas-pasadas.component';
 
 
 @NgModule({
@@ -27,16 +37,24 @@ import { LoaderComponent } from './elements/loader/loader.component';
     ContenidoComponent,
     Color2Component,
     LoginComponent,
-    LoaderComponent
+    LoaderComponent,
+    NavComponent,
+    HomeComponent,
+    ApuestasComponent,
+    ConfiguracionComponent,
+    PanelComponent,
+    NuevasApuestasComponent,
+    ApuestasPasadasComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    AppRoutingModule
   ],
-  providers: [InstagramService, LoginService],
+  providers: [InstagramService, LoginService, BreakpointObserver, MediaMatcher],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

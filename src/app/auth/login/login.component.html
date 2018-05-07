@@ -1,0 +1,15 @@
+<img src="https://a0.muscache.com/airbnb/growth/magic_carpet/curated_marquee/amsterdam_2x.jpeg"/>
+
+<form (submit)="logUser(form)" #form="ngForm">
+    <mat-form-field class="example-full-width">
+      <input required matInput placeholder="E-mail" ngModel required name="correo" type="email">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <input required matInput placeholder="Password" ngModel required name="password" type="password">
+    </mat-form-field>
+    <br>
+    <button mat-button color="primary" type="submit">Log In</button>
+  </form>
+  <br><br>
+  {{mensaje}}

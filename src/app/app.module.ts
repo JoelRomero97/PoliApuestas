@@ -10,10 +10,12 @@ import { ContenidoComponent } from './contenido/contenido.component';
 import { Color2Component } from './color2/color2.component';
 
 import { InstagramService } from './services/instagram.service';
+import { LoginService } from './services/login.service';
 import { HttpClientModule } from '@angular/common/http';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from './material.module';
+import { LoginComponent } from './auth/login/login.component';
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import {MaterialModule} from './material.module';
     ColorComponent,
     TituloComponent,
     ContenidoComponent,
-    Color2Component
+    Color2Component,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,7 @@ import {MaterialModule} from './material.module';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [InstagramService],
+  providers: [InstagramService, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

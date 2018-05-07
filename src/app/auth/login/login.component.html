@@ -12,4 +12,13 @@
     <button mat-button color="primary" type="submit">Log In</button>
   </form>
   <br>
-  <div class="Mensaje">{{mensaje}}</div>
+  <div *ngIf = "!logging; then servicioCompleto; else servicioNoCompleto"></div>
+  <!-- {{mensaje}} -->
+
+<ng-template #servicioCompleto>
+    <div class="Mensaje">{{mensaje}}</div>
+</ng-template>
+
+<ng-template #servicioNoCompleto>
+    <app-loader></app-loader>
+</ng-template>

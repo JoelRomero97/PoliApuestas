@@ -32,6 +32,7 @@ export class LoginService {
                           //Segundo parámetro de suscripción, cuando es errónea la petición
                           observer.error("Correo incorrecto");
                         }
+                        observer.complete()
                     }, 2000);
       });
   }

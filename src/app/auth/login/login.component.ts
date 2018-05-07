@@ -8,7 +8,8 @@ import { LoginService } from './../../services/login.service'
 })
 export class LoginComponent implements OnInit {
 
-  mensaje : any;
+  mensaje : string = '';
+  logging : boolean = false;
 
   constructor(private servicio:LoginService) { }
 
@@ -17,8 +18,11 @@ export class LoginComponent implements OnInit {
 
   logUser (formulario) //Esta función manda a llamar a LoginService
   {
+    this.logging = true;
     this.servicio.logUser(formulario).subscribe(
       result => {this.mensaje = result},
-      error => {this.mensaje = error});
+      error => {this.mensaje = error, this.logging = false},
+      () => this.logging = false);
+    this.logging = true;
   }
 }

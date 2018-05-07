@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from './material.module';
 import { LoginComponent } from './auth/login/login.component';
+import { LoaderComponent } from './elements/loader/loader.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { LoginComponent } from './auth/login/login.component';
     TituloComponent,
     ContenidoComponent,
     Color2Component,
-    LoginComponent
+    LoginComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

@@ -10,12 +10,11 @@
     <button mat-button color="primary" type="submit">Log In</button>
   </form>
   <div *ngIf = "!logging; then servicioCompleto; else servicioNoCompleto"></div>
-  <!-- {{mensaje}} -->
-
+<!-- IF -->
 <ng-template #servicioCompleto>
     <div class="Mensaje"><br>{{mensaje}}</div>
 </ng-template>
-
+<!-- ELSE -->
 <ng-template #servicioNoCompleto>
     <app-loader></app-loader>
 </ng-template>

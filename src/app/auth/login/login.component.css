@@ -1,18 +1,31 @@
-img
+.imagen
 {
-    width: 100%;
-    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-form
+img
+{
+    padding-bottom: 10px;
+    width: 98%;
+    height: 35%;
+}
+
+.formulario_login
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+/* form
 {
     text-align: center;
-}
+} */
 
 .Mensaje
 {
-    background-color: deepskyblue;
-    width: 10%;
     font-family: Helvetica;
-    text-align: center;
 }

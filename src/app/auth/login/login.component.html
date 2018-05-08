@@ -1,22 +1,19 @@
-<img src="https://a0.muscache.com/airbnb/growth/magic_carpet/curated_marquee/amsterdam_2x.jpeg"/>
+<div class="imagen"><img src="https://a0.muscache.com/airbnb/growth/magic_carpet/curated_marquee/amsterdam_2x.jpeg"/></div>
 
-<form (submit)="logUser(form)" #form="ngForm">
+<form (submit)="logUser(form)" #form="ngForm" class="formulario_login">
     <mat-form-field class="example-full-width">
-      <input required matInput placeholder="E-mail" ngModel required name="correo" type="email">
+      <input required matInput placeholder="E-mail" ngModel required name="correo" type="email" class="email">
     </mat-form-field>
-    <br>
-    <mat-form-field class="example-full-width">
-      <input required matInput placeholder="Password" ngModel required name="password" type="password">
+    <mat-form-field class="example-full-width" fxLayoutAlign="space-around center">
+      <input required matInput placeholder="Password" ngModel required name="password" type="password" class="password">
     </mat-form-field>
-    <br>
     <button mat-button color="primary" type="submit">Log In</button>
   </form>
-  <br>
   <div *ngIf = "!logging; then servicioCompleto; else servicioNoCompleto"></div>
   <!-- {{mensaje}} -->
 
 <ng-template #servicioCompleto>
-    <div class="Mensaje">{{mensaje}}</div>
+    <div class="Mensaje"><br>{{mensaje}}</div>
 </ng-template>
 
 <ng-template #servicioNoCompleto>

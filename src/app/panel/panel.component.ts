@@ -6,14 +6,7 @@ import { HomeComponent } from "./../panel/home/home.component";
 import { ApuestasComponent } from "./../panel/apuestas/apuestas.component";
 import { ConfiguracionComponent } from "./../panel/configuracion/configuracion.component";
 
-@Component({
-  selector: 'app-panel',
-  templateUrl: './panel.component.html',
-  styleUrls: ['./panel.component.css']
-})
-export class PanelComponent implements OnInit {
-
-  @Input() appRoutes:Routes = 
+const appRoutes:Routes = 
   [
     {
       path:'',
@@ -31,6 +24,13 @@ export class PanelComponent implements OnInit {
         pathMatch:'full'
     }
   ]
+
+@Component({
+  selector: 'app-panel',
+  templateUrl: './panel.component.html',
+  styleUrls: ['./panel.component.css']
+})
+export class PanelComponent implements OnInit {
 
   constructor() { }
 

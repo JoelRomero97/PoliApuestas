@@ -21,17 +21,20 @@ const appRoutes:Routes =
             children:
             [
                 {
+                    //localhost:4200/admin
                     path:'',
                     component:HomeComponent,
                     pathMatch:'full'
                 },
                 {
-                    path:'apuesta',
+                    //localhost:4200/admin/apuestas
+                    path:'apuestas',
                     component:ApuestasComponent,
                     pathMatch:'full'
                 },
                 {
-                    path:'configuracion',
+                    //localhost:4200/admin/conf
+                    path:'conf',
                     component:ConfiguracionComponent,
                     pathMatch:'full'
                 }

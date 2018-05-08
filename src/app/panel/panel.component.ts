@@ -4,6 +4,7 @@ import { NavComponent } from "./../navigation/nav/nav.component";
 import { LoginComponent } from "./../auth/login/login.component";
 import { HomeComponent } from "./../panel/home/home.component";
 import { ApuestasComponent } from "./../panel/apuestas/apuestas.component";
+import {MatTabsModule} from '@angular/material/tabs';
 import { ConfiguracionComponent } from "./../panel/configuracion/configuracion.component";
 
 const appRoutes:Routes = 
@@ -31,6 +32,19 @@ const appRoutes:Routes =
   styleUrls: ['./panel.component.css']
 })
 export class PanelComponent implements OnInit {
+
+  nav_config = [{
+    label: "Home",
+    link:"/admin"
+  },
+  {
+    label:"Apuestas",
+    link:"apuestas"
+  },
+  {
+    label:"Configuracion",
+    link:"conf"
+  }];
 
   constructor() { }
 

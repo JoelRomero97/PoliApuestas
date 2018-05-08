@@ -18,6 +18,7 @@ import {MaterialModule} from './material.module';
 import { LoginComponent } from './auth/login/login.component';
 import { LoaderComponent } from './elements/loader/loader.component';
 import { NavComponent } from './navigation/nav/nav.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 import { MediaMatcher, BreakpointObserver } from '@angular/cdk/layout';
 import { AppRoutingModule } from './app-routing.module';
@@ -52,6 +53,7 @@ import { ApuestasPasadasComponent } from './panel/apuestas/apuestas-pasadas/apue
     HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
+    MatTabsModule,
     AppRoutingModule
   ],
   providers: [InstagramService, LoginService, BreakpointObserver, MediaMatcher],

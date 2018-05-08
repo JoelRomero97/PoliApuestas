@@ -33,7 +33,8 @@ const appRoutes:Routes =
 })
 export class PanelComponent implements OnInit {
 
-  nav_config = [{
+  nav_config = 
+  [{
     label: "Home",
     link:"/admin"
   },

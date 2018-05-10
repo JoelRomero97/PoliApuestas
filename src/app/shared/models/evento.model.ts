@@ -37,4 +37,13 @@ export class Eventomodel
 		return this.description;
 	}
     
+
+    /**
+     * Setter $id
+     * @param {string} value
+     */
+	public set $id(value: string) {
+		this.id = value;
+	}
+    
 }

@@ -9,19 +9,19 @@
       <!-- ID Column -->
       <ng-container matColumnDef="ID">
         <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.ID}} </mat-cell>
+        <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
       </ng-container>
   
       <!-- Titulo Column -->
       <ng-container matColumnDef="Titulo">
         <mat-header-cell *matHeaderCellDef> Titulo </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.Titulo}} </mat-cell>
+        <mat-cell *matCellDef="let element"> {{element.title}} </mat-cell>
       </ng-container>
   
       <!-- Descripcion Column -->
       <ng-container matColumnDef="Descripcion">
         <mat-header-cell *matHeaderCellDef> Descripcion </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.Descripcion}} </mat-cell>
+        <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
       </ng-container>
   
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

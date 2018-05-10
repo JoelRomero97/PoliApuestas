@@ -21,12 +21,6 @@ export class EventocreateComponent implements OnInit {
       result => {console.log(result)},
       error => {console.log(error)}
     );
-
-
-    this.servicio.list().subscribe(
-      result => {console.log(result)},
-      error => {console.log(error)}
-    );
     // console.log(form.value);
   }
 

@@ -40,7 +40,7 @@ export class EventosComponent implements OnInit {
 
   onUpdateData (){
     this.servicio.list().subscribe(
-      (result: any) => {
+      result => {
         const items = [];
         for(let key of Object.keys(result)) {
           const aux = new Eventomodel(result[key].title, result[key].description);
@@ -48,7 +48,6 @@ export class EventosComponent implements OnInit {
           items.push(aux);
         }
         this.dataSource = items;
-        console.log(items);
       },
       error => {this.dataSource = new MatTableDataSource()}
     );

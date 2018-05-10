@@ -1,0 +1,11 @@
+<form (submit)="onSubmit(form)" #form="ngForm" class="example-form" fxLayout="column" fxLayoutAlign="space-between">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Titulo" ngModel name="titulo">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Descripción" ngModel name="descripcion"></textarea>
+  </mat-form-field>
+
+  <button mat-button color="primary" type="submit">Create</button>
+</form>

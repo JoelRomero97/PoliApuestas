@@ -10,6 +10,7 @@ import { ContenidoComponent } from './contenido/contenido.component';
 import { Color2Component } from './color2/color2.component';
 
 import { InstagramService } from './services/instagram.service';
+import { ApuestaService } from './services/apuesta.service';
 import { LoginService } from './services/login.service';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -29,6 +30,11 @@ import { PanelComponent } from './panel/panel.component';
 import { NuevasApuestasComponent } from './panel/apuestas/nuevas-apuestas/nuevas-apuestas.component';
 import { ApuestasPasadasComponent } from './panel/apuestas/apuestas-pasadas/apuestas-pasadas.component';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { EventosComponent } from './panel/eventos/eventos.component';
+import { EventocreateComponent } from './panel/eventos/eventocreate/eventocreate.component';
+import { EventService } from './services/event.service';
+
 
 @NgModule({
   declarations: [
@@ -45,7 +51,9 @@ import { ApuestasPasadasComponent } from './panel/apuestas/apuestas-pasadas/apue
     ConfiguracionComponent,
     PanelComponent,
     NuevasApuestasComponent,
-    ApuestasPasadasComponent
+    ApuestasPasadasComponent,
+    EventosComponent,
+    EventocreateComponent
   ],
   imports: [
     BrowserModule,
@@ -54,9 +62,13 @@ import { ApuestasPasadasComponent } from './panel/apuestas/apuestas-pasadas/apue
     BrowserAnimationsModule,
     MaterialModule,
     MatTabsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FlexLayoutModule
   ],
-  providers: [InstagramService, LoginService, BreakpointObserver, MediaMatcher],
-  bootstrap: [AppComponent]
+  providers: [InstagramService, LoginService, BreakpointObserver, MediaMatcher, ApuestaService, EventService],
+  bootstrap: [AppComponent],
+  entryComponents: [
+    EventocreateComponent
+  ]
 })
 export class AppModule { }

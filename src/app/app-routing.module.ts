@@ -6,6 +6,7 @@ import { PanelComponent } from './panel/panel.component';
 import { HomeComponent } from "./panel/home/home.component";
 import { ApuestasComponent } from "./panel/apuestas/apuestas.component";
 import { ConfiguracionComponent } from "./panel/configuracion/configuracion.component";
+import { EventosComponent } from "./panel/eventos/eventos.component";
 
 const appRoutes:Routes = 
     [
@@ -24,6 +25,12 @@ const appRoutes:Routes =
                     //localhost:4200/admin
                     path:'',
                     component:HomeComponent,
+                    pathMatch:'full'
+                },
+                {
+                    //localhost:4200/admin/eventos
+                    path:'eventos',
+                    component:EventosComponent,
                     pathMatch:'full'
                 },
                 {

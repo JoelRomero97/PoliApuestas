@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { LoginService } from './../../services/login.service'
 
 @Component({

@@ -1,3 +1,18 @@
-<p>
-  nuevas-apuestas works!
-</p>
+<form (submit)="logUser(form)" #form="ngForm" class="formulario_login" fxLayout="column" fxLayoutAlign="space-around center">
+  <mat-form-field>
+      <mat-select placeholder="Evento">
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{ food.viewValue }}
+        </mat-option>
+      </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Fecha">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input required matInput placeholder="Cantidad" ngModel name="amount" type="text" class="amount">
+  </mat-form-field>
+  <button mat-button color="primary" type="submit">Apostar</button>
+</form>

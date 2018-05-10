@@ -1,0 +1,30 @@
+<button mat-raised-button (click)="onCreate()" color="primary">Create</button>
+
+<div class="example-container mat-elevation-z8">
+    <mat-table #table [dataSource]="dataSource">
+  
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+      
+      <!-- ID Column -->
+      <ng-container matColumnDef="ID">
+        <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.ID}} </mat-cell>
+      </ng-container>
+  
+      <!-- Titulo Column -->
+      <ng-container matColumnDef="Titulo">
+        <mat-header-cell *matHeaderCellDef> Titulo </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Titulo}} </mat-cell>
+      </ng-container>
+  
+      <!-- Descripcion Column -->
+      <ng-container matColumnDef="Descripcion">
+        <mat-header-cell *matHeaderCellDef> Descripcion </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Descripcion}} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>

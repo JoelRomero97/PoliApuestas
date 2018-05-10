@@ -6,6 +6,7 @@ import { HomeComponent } from "./../panel/home/home.component";
 import { ApuestasComponent } from "./../panel/apuestas/apuestas.component";
 import {MatTabsModule} from '@angular/material/tabs';
 import { ConfiguracionComponent } from "./../panel/configuracion/configuracion.component";
+import { EventosComponent } from './eventos/eventos.component';
 
 const appRoutes:Routes = 
   [
@@ -18,6 +19,11 @@ const appRoutes:Routes =
         path:'apuesta',
         component:ApuestasComponent,
         pathMatch:'full'
+    },
+    {
+      path:'eventos',
+      component:EventosComponent,
+      pathMatch:'full'
     },
     {
         path:'configuracion',
@@ -37,6 +43,10 @@ export class PanelComponent implements OnInit {
   [{
     label: "Home",
     link:"/admin"
+  },
+  {
+    label:"Eventos",
+    link:"eventos"
   },
   {
     label:"Apuestas",

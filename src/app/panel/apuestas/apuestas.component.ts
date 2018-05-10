@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTabsModule} from '@angular/material/tabs';
+import { NuevasApuestasComponent } from './nuevas-apuestas/nuevas-apuestas.component';
 
 @Component({
   selector: 'app-apuestas',

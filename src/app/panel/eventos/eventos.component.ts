@@ -13,7 +13,6 @@ import { Eventomodel } from '../../shared/models/evento.model';
 })
 
 export class EventosComponent implements OnInit {
-
   displayedColumns = ['ID', 'Titulo', 'Descripcion'];
   dataSource;
 
@@ -26,25 +25,33 @@ export class EventosComponent implements OnInit {
   constructor(private dialog:MatDialog, private servicio:EventService) { }
 
   ngOnInit() {
+    this.onUpdateData();
+  }
+
+  onCreate() {
+    const eventcreate = this.dialog.open(EventocreateComponent, {
+      data:{}
+    });
+    eventcreate.afterClosed().subscribe(
+      result => {this.onUpdateData()},
+      error => {console.log('Imposible actualizar datos')}
+    );
+  }
+
+  onUpdateData (){
     this.servicio.list().subscribe(
       (result: any) => {
         const items = [];
         for(let key of Object.keys(result)) {
           const aux = new Eventomodel(result[key].title, result[key].description);
           aux.$id = result[key].id;
-          items.push(aux)
+          items.push(aux);
         }
         this.dataSource = items;
         console.log(items);
       },
       error => {this.dataSource = new MatTableDataSource()}
     );
-  }
-
-  onCreate() {
-    this.dialog.open(EventocreateComponent, {
-      data:{}
-    });
   }
 
 }

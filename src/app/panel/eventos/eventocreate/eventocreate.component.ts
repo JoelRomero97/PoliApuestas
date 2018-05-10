@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Eventomodel } from '../../../shared/models/evento.model';
 import { EventService } from '../../../services/event.service';
+import { MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-eventocreate',
@@ -9,7 +10,7 @@ import { EventService } from '../../../services/event.service';
 })
 export class EventocreateComponent implements OnInit {
 
-  constructor(private servicio: EventService) {
+  constructor(private servicio: EventService, private dialogRef:MatDialogRef <EventocreateComponent>) {
    }
 
   ngOnInit() {
@@ -18,10 +19,9 @@ export class EventocreateComponent implements OnInit {
   onSubmit(form) {
     const event: Eventomodel = new Eventomodel(form.value.titulo, form.value.descripcion);
     this.servicio.create(event).subscribe(
-      result => {console.log(result)},
+      result => {console.log(result), this.dialogRef.close(result)},
       error => {console.log(error)}
     );
-    // console.log(form.value);
   }
 
 }
